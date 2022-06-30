@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dom Inc Status</title>
+    <title>Server_Name</title>
   </head>
   <body>
     <button onclick="sendMessage()">Send</button>
@@ -11,17 +11,17 @@
   <script>
     function sendMessage() {
         var request = new XMLHttpRequest();
-    request.open("open", "https://discord.com/api/webhooks/992001023902232596/4dMi27O3wTwYsrtHDAME2IrIlMgQu2SOXLNmuvNIC5atNMiQ9dwnOSJ9Plz28D79O4TE");
+    request.open("open", "Webhook_Here");
     
     request.setRequestHeader('Content-type', 'application/json');
     
 
     var myEmbed = {
     author: {
-    name: "Server Restart"
+    name: "Server_Name Status"
     },
-    title: "__**Dom Inc Has Been Restarted!**__",
-    description: "Our server has just been restarted! Please Connect via `pressing F8 and typing connect cfx.re/join.` or by `searching for Dom Inc in FiveM",
+    title: "__** Server_Name Has Been Restarted!**__",
+    description: "Server Description",
     image: {
       url: "IMAGE URL HERE_MUST END IN .PNG"
     },
@@ -29,9 +29,9 @@
 }
 
 var params = {
-  username: "Dom Inc Status",
+  username: "Server_Name Status",
   avatar_url: "",
-  content: "<@&988867621761978389>",
+  content: "<@& ROLE ID HERE>",
   embeds: [ myEmbed ]
 }
 
