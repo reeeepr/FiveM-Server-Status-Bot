@@ -1,0 +1,48 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Inc Status</title>
+  </head>
+  <body>
+    <button onclick="sendMessage()">Send</button>
+  </body>
+
+  <script>
+    function sendMessage() {
+        var request = new XMLHttpRequest();
+    request.open("open", "https://discord.com/api/webhooks/992001023902232596/4dMi27O3wTwYsrtHDAME2IrIlMgQu2SOXLNmuvNIC5atNMiQ9dwnOSJ9Plz28D79O4TE");
+    
+    request.setRequestHeader('Content-type', 'application/json');
+    
+
+    var myEmbed = {
+    author: {
+    name: "Server Restart"
+    },
+    title: "__**Dom Inc Has Been Restarted!**__",
+    description: "Our server has just been restarted! Please Connect via `pressing F8 and typing connect cfx.re/join.` or by `searching for Dom Inc in FiveM",
+    image: {
+      url: "IMAGE URL HERE_MUST END IN .PNG"
+    },
+    color: hexToDecimal("#ff0000")
+}
+
+var params = {
+  username: "Dom Inc Status",
+  avatar_url: "",
+  content: "<@&988867621761978389>",
+  embeds: [ myEmbed ]
+}
+
+request.send(JSON.stringify(params));
+
+
+function hexToDecimal(hex) {
+  return parseInt(hex.replace("#",""), 16)
+}
+
+      request.send(JSON.stringify(params));
+    }
+  </script>
+</html>
